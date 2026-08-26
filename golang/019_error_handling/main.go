@@ -2,24 +2,33 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
-func run() {}
+func divide(a float64, b float64) (float64, error) {
+	if b == 0 {
+		return 0, fmt.Errorf("Cannot divide by 0")
+	}
+	return a / b, nil
+}
 
-func parse(s string) (int, error) {
-	value, error := strconv.Atoi(s)
-	if error != nil {
-		return 0, fmt.Errorf("Value must be a number!")
+func ageVerification(age int) error {
+	if age < 18 {
+		return fmt.Errorf("Age must be 18 or above")
 	}
 
-	if value < 1 || value > 5 {
-		return 0, fmt.Errorf("Value must be in between 1 and 5")
-	}
-
-	return value, nil
+	return nil
 }
 
 func main() {
-	fmt.Println()
+	res, err := divide(7, 0)
+	if err != nil {
+		fmt.Println("Error:", err)
+	} else {
+		fmt.Println("Result:", res)
+	}
+
+	err = ageVerification(1)
+	if err != nil {
+		fmt.Println("Error:", err)
+	}
 }
