@@ -15,10 +15,17 @@ type Skills struct {
 	SkillThree string
 }
 
+// value receiver of struct "Skills"
 func (s Skills) showSkills() {
 	fmt.Println(s.SkillOne)
 	fmt.Println(s.SkillTwo)
 	fmt.Println(s.SkillThree)
+}
+
+// original pointer address of the struct
+func (s *Skills) pointerSkills() {
+	s.SkillOne = "Changed by pointer"
+	fmt.Println("Inside pointer:", s.SkillOne)
 }
 
 func main() {
@@ -36,4 +43,7 @@ func main() {
 		SkillThree: "Javascript",
 	}
 	fmt.Println(mySkills)
+
+	mySkills.pointerSkills()
+	fmt.Println("After pointer:", mySkills.SkillOne)
 }
