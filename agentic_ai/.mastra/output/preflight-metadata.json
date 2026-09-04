@@ -1,1 +1,1 @@
-{"version":1,"localPaths":[],"userEnvRefs":[]}
+{"version":1,"localPaths":[{"value":"file:./mastra.db","hint":"LibSQL/SQLite file path relative to the build host","module":"/home/indiedev/Develooper/placement/agentic_ai/src/mastra/index.ts"}],"userEnvRefs":[]}

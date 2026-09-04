@@ -1,1 +1,1 @@
-[{"name":"@mastra/core","version":"1.63.2"},{"name":"mastra","version":"1.27.2"}]
+[{"name":"@mastra/core","version":"1.63.2"},{"name":"@mastra/duckdb","version":"1.6.4"},{"name":"@mastra/libsql","version":"1.22.3"},{"name":"@mastra/memory","version":"1.28.2"},{"name":"@mastra/observability","version":"1.17.5"},{"name":"mastra","version":"1.27.2"}]

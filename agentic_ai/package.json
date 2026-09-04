@@ -1,20 +1,23 @@
 {
-  "name": "agentic_ai",
+  "name": "agentic-ai-crash-course-2026",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "description": "",
   "scripts": {
-    "dev":"mastra dev",
-    "build":"mastra build"
+    "dev": "mastra dev",
+    "build": "mastra build"
   },
   "type": "module",
   "devDependencies": {
-    "@types/node": "^22.13.0",
+    "@types/node": "^26.4.0",
     "mastra": "^1.27.2",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.3"
+    "typescript": "^6.0.3"
   },
   "dependencies": {
     "@mastra/core": "^1.63.2",
+    "@mastra/duckdb": "^1.6.3",
+    "@mastra/libsql": "^1.22.2",
+    "@mastra/memory": "^1.28.1",
+    "@mastra/observability": "^1.17.4",
     "zod": "^4.5.4"
   }
 }

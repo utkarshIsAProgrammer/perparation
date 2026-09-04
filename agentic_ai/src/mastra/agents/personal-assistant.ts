@@ -1,8 +1,21 @@
-import {Agent} from "@mastra/core/agent"
+import { Agent } from "@mastra/core/agent";
+import { personalAssistantInstructions } from "./instructions";
+import { weatherTool } from "../../tools/weather-tool";
+import { saveNoteTool } from "../../tools/save-tool";
+import { Memory } from "@mastra/memory";
 
 export const personalAssistant = new Agent({
-    id: "personal-assistant",
-    name: "Personal Assistant",
-    instructions: "You are a personal assistant. Answer clearly and concisely. When you don't have access to real-time information, do not pretend that you do. If asked about live data such as current weather, explain you cannot access it yet. ",
-    model: "google/gemini-3.7-flash",
-})
+  id: "personal-assistant",
+  name: "Personal Assistant",
+  instructions: personalAssistantInstructions,
+  memory: new Memory({
+    options: {
+      lastMessages: 20,
+    },
+  }),
+  model: "google/gemini-2.5-flash",
+  tools: {
+    getWeather: weatherTool,
+    saveNote: saveNoteTool,
+  },
+});
