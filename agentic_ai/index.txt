@@ -1,0 +1,6 @@
+>> 5 steps for agentic development:
+1. Model
+2. Instruction
+3. Tool
+4. Memory
+5. Agent Loop 
