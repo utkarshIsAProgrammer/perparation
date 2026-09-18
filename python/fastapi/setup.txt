@@ -1,0 +1,11 @@
+mkdir project_name
+cd project_name
+
+python3 -m venv .venv
+. .venv/bin/activate
+echo > ".venv" > .gitignore
+
+pip install --upgrade pip
+pip install "fastapi[standard]"
+
+pip freeze > requirements.txt
